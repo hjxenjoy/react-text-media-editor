@@ -1,13 +1,13 @@
 {
   "name": "react-text-media-editor",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "simple react web editor just support text and media",
   "main": "dist/index.js",
   "typings": "./index.d.ts",
   "scripts": {
     "prestart": "yarn",
+    "prepublishOnly": "rm -rf ./dist && npm run build",
     "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
-    "prepublish": "rm -rf ./dist && npm run build",
     "build": "webpack --config ./config/webpack.config.prod.js"
   },
   "repository": {
@@ -71,10 +71,13 @@
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2"
   },
+  "dependencies": {
+    "array-move": "^2.1.0"
+  },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-sortable-hoc": "^1.9.1",
-    "prop-types": "^15.7.2"
+    "react-sortable-hoc": "^1.9.1"
   }
 }
