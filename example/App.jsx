@@ -14,6 +14,8 @@ function App() {
 
   function updateValue(nextValue) {
     setValue(nextValue)
+    // eslint-disable-next-line
+    console.log(nextValue)
   }
 
   function uploadImages(files, callback) {
@@ -25,7 +27,7 @@ function App() {
           _id: file._id,
         }))
       )
-    }, 1000)
+    }, 2000)
   }
 
   return (
