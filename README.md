@@ -25,7 +25,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
 import RtmEditor from 'react-text-media-editor'
-import 'react-text-media-editor/style.css'
+import 'react-text-media-editor/dist/style.css'
 
 const IMAGE = 'https://picsum.photos/500/150'
 
@@ -48,7 +48,7 @@ function Example() {
       callback(
         files.map(file => ({
           status: 'done',
-          url: 'https://your.domain.com/your/image/url',
+          url: '', // 'https://your.domain.com/your/image/url',
           _id: file._id,
         }))
       )
