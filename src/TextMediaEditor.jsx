@@ -211,8 +211,8 @@ function TextMediaEditor(props) {
   function fileUploaded(files) {
     const fileIds = files.map(f => f._id)
     // must do this
-    setConfig(prevConfig =>
-      prevConfig.map(item => {
+    _setConfig(prevConfig => {
+      const nextConfig = prevConfig.map(item => {
         if (item.type === DataType.image && fileIds.includes(item._id)) {
           const matched = files[fileIds.indexOf(item._id)]
           return {
@@ -223,7 +223,10 @@ function TextMediaEditor(props) {
         }
         return item
       })
-    )
+      // 🤔 any good ideas
+      onChange(cleanConfigData(nextConfig))
+      return nextConfig
+    })
   }
 
   function addImages(images = [], files, prevRow) {
