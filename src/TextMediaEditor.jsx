@@ -20,6 +20,12 @@ function initConfigData(rows = []) {
   }))
 }
 
+function cleanConfigData(rows = []) {
+  return rows
+    .filter(item => item.raw || item.status === 'done')
+    .map(({ _id, status, ...row }) => row)
+}
+
 const SortableHandleIcon = SortableHandle(() => <MoveIcon />)
 
 const SortableItem = SortableElement(({ data, ...actions }) => (
@@ -45,9 +51,15 @@ const SortableList = SortableContainer(({ items, ...actions }) => {
 })
 
 function TextMediaEditor(props) {
+  const { onChange = () => {} } = props
   const [focusId, setFocusId] = useState()
   const [cursor, setCursor] = useState()
-  const [config, setConfig] = useState(initConfigData(props.value || []))
+  const [config, _setConfig] = useState(initConfigData(props.value || []))
+
+  function setConfig(rows) {
+    _setConfig(rows)
+    onChange(cleanConfigData(rows))
+  }
 
   function updateData(newRow) {
     const newConfig = config.map(item => {
