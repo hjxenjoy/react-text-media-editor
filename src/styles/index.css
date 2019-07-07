@@ -1,0 +1,173 @@
+.react-text-media-editor,
+.react-text-media-editor * {
+  box-sizing: border-box;
+}
+
+.react-text-media-editor {
+  color: #333;
+  padding-left: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  min-height: 300px;
+}
+
+.react-text-media-editor ::placeholder {
+  color: #999;
+}
+
+.rtme-text-placeholder {
+  height: 15px;
+  /* background-color: rgba(255, 100, 0, .2); */
+  cursor: text;
+}
+
+.rtme-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #333;
+  border: 1px solid #333;
+  transition: transform .3s;
+}
+
+.rtme-icon.rtme-icon-active {
+  transform: rotate(135deg);
+}
+
+.rtme-icon svg,
+.rtme-move-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.rtme-move-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.rtme-textarea {
+  display: flex;
+  width: 100%;
+  resize: none;
+  border: 0 none;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  height: 1.5em;
+  background-color: transparent;
+}
+
+.rtme-textarea:focus {
+  outline: none;
+}
+
+.rtme-image {
+  border: 0 none;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.rtme-media-box {
+  display: inline-flex;
+  font-size: 0;
+}
+
+.media-upload-uploading {
+  position: relative;
+}
+
+.media-upload-uploading::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, .5);
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.media-upload-uploading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, .6);
+  border-top-color: rgba(255, 255, 255, .3);
+  animation: circle .8s infinite linear;
+}
+
+.rtme-media-box .rtme-image:hover {
+  outline: 2px solid #a7e6a7;
+}
+
+.rtme-media-box.media-focused .rtme-image {
+  outline: 2px solid #7fb57f;
+}
+
+.rtme-row {
+  position: relative;
+  padding-right: 30px;
+}
+
+.rtme-row:hover {
+  background-color: #f7f7f7;
+}
+
+.rtme-row+.rtme-row {
+  margin-top: 10px;
+}
+
+.rtme-row .rtme-move-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: move;
+}
+
+.rtme-control {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  font-size: 0;
+}
+
+.rtme-ctrls {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 0 20px 0 6px;
+  min-width: 300px;
+  display: flex;
+  background-color: #fff;
+}
+
+.rtme-upload-label {
+  display: flex;
+}
+
+.rtme-upload input[type="file"] {
+  display: none;
+}
