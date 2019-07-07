@@ -1,9 +1,9 @@
 {
   "name": "react-text-media-editor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "simple react web editor just support text and media",
   "main": "dist/index.js",
-  "typings": "./index.d.ts",
+  "typings": "types/index.d.ts",
   "scripts": {
     "prestart": "yarn",
     "prepublishOnly": "rm -rf ./dist && npm run build",
