@@ -15,9 +15,9 @@ function Control(props) {
 
   async function uploadImageChange(evt) {
     const files = [...evt.target.files]
-
-    const images = await Promise.all(files.map(readImageFile))
     inputEle.current.value = ''
+    setActive(false)
+    const images = await Promise.all(files.map(readImageFile))
     props.onUploadImage(images, files)
   }
 
