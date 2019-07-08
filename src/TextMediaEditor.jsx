@@ -13,6 +13,9 @@ import './styles/index.css'
 const prefix = 'row'
 
 function initConfigData(rows = []) {
+  if (!rows.length) {
+    return [{ _id: guid(prefix), type: DataType.text, raw: '' }]
+  }
   return rows.map(item => ({
     _id: item._id || guid(prefix),
     ...item,
@@ -74,6 +77,17 @@ function TextMediaEditor(props) {
   // remove data
   // focus previous text row if exist
   function removeData(data) {
+    if (config.length === 1) {
+      if (data.type === DataType.text) {
+        setConfig([{ ...data, raw: '' }])
+      } else {
+        const newEmptyTextId = guid(prefix)
+        setConfig([{ _id: newEmptyTextId, type: DataType.text, raw: '' }])
+        setFocusId(newEmptyTextId)
+      }
+      return
+    }
+
     const rowIndex = config.map(item => item._id).indexOf(data._id)
     const prevRow = config[rowIndex - 1]
     setConfig(config.filter(item => item._id !== data._id))
