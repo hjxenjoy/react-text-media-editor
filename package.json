@@ -21,6 +21,15 @@
     "url": "https://github.com/hjxenjoy/react-text-media-editor/issues"
   },
   "homepage": "https://github.com/hjxenjoy/react-text-media-editor#readme",
+  "github": {
+    "release": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint --fix",
@@ -41,6 +50,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@release-it/conventional-changelog": "^1.1.0",
     "autoprefixer": "^9.6.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
@@ -66,6 +76,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-sortable-hoc": "^1.9.1",
+    "release-it": "^12.3.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4",

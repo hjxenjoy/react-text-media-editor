@@ -44,12 +44,7 @@ function ImageElement(props) {
         className={`rtme-media-box${focused ? ' media-focused' : ''} media-upload-${data.status}`}
         onClick={focusThis}
       >
-        <img
-          className="rtme-image"
-          src={data.url}
-          alt={data.name}
-          style={{ width: data.width, height: data.height }}
-        />
+        <img className="rtme-image" src={data.url} alt={data.name} style={{ width: data.width }} />
       </div>
       {props.sortHandle}
     </div>
