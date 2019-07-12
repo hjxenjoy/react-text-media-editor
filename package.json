@@ -1,6 +1,6 @@
 {
   "name": "react-text-media-editor",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "simple react web editor just support text and media",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
