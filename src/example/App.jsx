@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-import Editor from '../src'
+import Editor from '../TextMediaEditor'
+import './main.css'
 
 const IMAGE = 'https://picsum.photos/500/150'
 

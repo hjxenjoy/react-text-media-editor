@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // https://itnext.io/how-to-package-your-react-component-for-distribution-via-npm-d32d4bf71b4f
 module.exports = {
   mode: 'production',
-  entry: './src/index.jsx',
+  entry: './src/TextMediaEditor.jsx',
   output: {
     path: path.join(__dirname, '../dist'),
     filename: 'index.js',

@@ -1,3 +1,8 @@
-import TextMediaEditor from './TextMediaEditor'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-export default TextMediaEditor
+import App from './example/App'
+
+const root = document.getElementById('root')
+
+ReactDOM.render(<App />, root)
