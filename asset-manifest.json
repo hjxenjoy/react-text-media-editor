@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://hujin.xin/react-text-media-editor/static/css/main.903c5942.chunk.css",
+    "main.js": "https://hujin.xin/react-text-media-editor/static/js/main.3f567162.chunk.js",
+    "main.js.map": "https://hujin.xin/react-text-media-editor/static/js/main.3f567162.chunk.js.map",
+    "runtime~main.js": "https://hujin.xin/react-text-media-editor/static/js/runtime~main.6be93b58.js",
+    "runtime~main.js.map": "https://hujin.xin/react-text-media-editor/static/js/runtime~main.6be93b58.js.map",
+    "static/js/2.ff500214.chunk.js": "https://hujin.xin/react-text-media-editor/static/js/2.ff500214.chunk.js",
+    "static/js/2.ff500214.chunk.js.map": "https://hujin.xin/react-text-media-editor/static/js/2.ff500214.chunk.js.map",
+    "index.html": "https://hujin.xin/react-text-media-editor/index.html",
+    "precache-manifest.20c2e9cd54cdaa79fcffcff52532c264.js": "https://hujin.xin/react-text-media-editor/precache-manifest.20c2e9cd54cdaa79fcffcff52532c264.js",
+    "service-worker.js": "https://hujin.xin/react-text-media-editor/service-worker.js",
+    "static/css/main.903c5942.chunk.css.map": "https://hujin.xin/react-text-media-editor/static/css/main.903c5942.chunk.css.map"
+  }
+}
